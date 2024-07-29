@@ -13,12 +13,45 @@
 :root {
     --primary-color: rgb(255, 84, 0);
     --link-color: rgb(66, 66, 71);
+    --section-title: rgb(19, 19, 24);
+    --section-desc: rgba(19, 19, 24, 0.7);
 }
 
-/* default syles */
+/* default styles */
 .container {
     width: 90%;
     margin: 0 auto;
+}
+
+.btn-primary {
+    padding: 15px 35px;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-title {
+    color: var(--section-title);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 3.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-desc {
+    color: var(--section-desc);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6rem;
 }
 
 /* Header styles */
@@ -120,6 +153,7 @@
     border-radius: 8px;
     font-size: 16px;
     color: rgba(19, 19, 24, 0.5);
+    cursor: pointer;
 }
 
 .banner-section .content .travel-inputs button {
@@ -128,36 +162,88 @@
     color: white;
 }
 
+/* Our Popular Tours styles  */
+.our-popular-tours {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.our-popular-tours .image-box {
+    width: 100%;
+}
+
+.our-popular-tours .image-box img {
+    width: 100%;
+    height: auto;
+}
+
+.our-popular-tours .content>.section-desc {
+    margin-bottom: 1.5rem;
+}
+.our-popular-tours .content ul{
+    margin-left: 20px;
+}
+.our-popular-tours .content ul>.section-desc {
+    margin-bottom: 1rem;
+}
 
 /* small devices */
-@media screen and  (max-width: 576px) {
-    .logo h2{
+@media screen and (max-width: 576px) {
+
+    /* default styles */
+    .section-title {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .section-desc {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
+
+    /* header section */
+    .logo h2 {
         font-size: 1.346rem;
         line-height: 1.688rem;
     }
-    .nav-items{
+
+    .nav-items {
         display: none;
     }
-    .phone-menu{
+
+    .phone-menu {
         display: block;
     }
-    .phone-menu > button{
+
+    .phone-menu>button {
         font-size: 25px;
         border: none;
         cursor: pointer;
     }
-    .banner-section{
+
+    .banner-section {
         padding: 2rem 1.5rem;
     }
-    .banner-section .content .title{
+
+    .banner-section .content .title {
         font-size: 1.375rem;
         line-height: 1.75rem;
     }
-    .banner-section .content .desc{
+
+    .banner-section .content .desc {
         font-size: 0.875;
         line-height: 1.313rem;
     }
-    .banner-section .content .travel-inputs{
+
+    .banner-section .content .travel-inputs {
         flex-direction: column;
+    }
+
+    /* Our Popular Tours */
+    .our-popular-tours {
+        flex-direction: column-reverse;
     }
 }
